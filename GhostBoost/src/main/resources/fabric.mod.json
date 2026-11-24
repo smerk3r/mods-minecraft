@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "ghostboost",
+  "version": "${version}",
+  "name": "GhostBoost",
+  "description": "Client-side performance presets for Minecraft 1.21.11.",
+  "authors": ["GhostBoost"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["ru.ghostboost.GhostBoostClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
