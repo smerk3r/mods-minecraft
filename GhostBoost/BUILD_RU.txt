@@ -1,0 +1,14 @@
+GHOSTBOOST — Minecraft 1.21.11 / Fabric
+
+1. Открой вкладку Actions репозитория smerk3r/mods-minecraft.
+2. Выбери workflow "Build GhostBoost" и дождись зелёного статуса.
+3. Открой успешный запуск workflow.
+4. В разделе Artifacts скачай GhostBoost-Minecraft-1.21.11.
+5. Распакуй архив артефакта, если он скачался ZIP-архивом.
+6. Положи GhostBoost-1.0.0.jar в .minecraft/mods.
+7. Запусти Minecraft 1.21.11 с Fabric и нажми Right Shift.
+
+Нужны Fabric Loader и Fabric API для Minecraft 1.21.11.
+
+ВАЖНО: текущая версия меняет встроенные игровые настройки через пресеты.
+Собственные патчи рендерера и движка чанков пока не реализованы.
