@@ -1,0 +1,57 @@
+name: Build SmerkerVisuals
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "SmerkerVisuals/**"
+      - ".github/workflows/smerkervisuals-build.yml"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "SmerkerVisuals/**"
+      - ".github/workflows/smerkervisuals-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+
+      - name: Set up Java 25
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.8.0"
+
+      - name: Build SmerkerVisuals
+        run: gradle --no-daemon -p SmerkerVisuals clean build
+
+      - name: Find installable JAR
+        id: jar
+        shell: bash
+        run: |
+          JAR="$(find SmerkerVisuals/build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' | head -n 1)"
+          if [ -z "$JAR" ]; then
+            echo "No installable JAR was produced."
+            exit 1
+          fi
+          echo "path=$JAR" >> "$GITHUB_OUTPUT"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmerkerVisuals-Minecraft-1.21.11
+          path: ${{ steps.jar.outputs.path }}
+          if-no-files-found: error
+          retention-days: 30
