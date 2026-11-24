@@ -15,10 +15,10 @@
 
 ## Требования
 
-- Minecraft Java Edition 1.21.11
+- Minecraft Java Edition 1.21.11 (runtime Java 21)
 - Fabric Loader
 - Fabric API для 1.21.11
-- Java 21 для локальной сборки
+- Java 25 для локальной сборки (сам мод компилируется под Java 21)
 
 ## Локальная сборка
 
