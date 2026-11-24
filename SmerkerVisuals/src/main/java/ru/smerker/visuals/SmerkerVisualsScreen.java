@@ -69,6 +69,8 @@ public final class SmerkerVisualsScreen extends Screen {
                 this.height / 2 - 80, 0xFFBFA7FF);
         graphics.drawCenteredString(this.font, "Visual modules", center,
                 this.height / 2 - 66, 0xFFFFFFFF);
+        graphics.drawCenteredString(this.font, "Owner: smerk3r", center,
+                this.height / 2 + 68, 0xFFBFA7FF);
 
         super.render(graphics, mouseX, mouseY, delta);
     }

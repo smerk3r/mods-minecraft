@@ -4,7 +4,8 @@
   "version": "${version}",
   "name": "SmerkerVisuals",
   "description": "Custom visual HUD and cosmetic modules for Minecraft 1.21.11.",
-  "authors": ["Smerker"],
+  "authors": ["smerk3r"],
+  "icon": "assets/smerkervisuals/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": ["ru.smerker.visuals.SmerkerVisualsClient"]
