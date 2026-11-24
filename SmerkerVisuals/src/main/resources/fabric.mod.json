@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "smerkervisuals",
+  "version": "${version}",
+  "name": "SmerkerVisuals",
+  "description": "Custom visual HUD and cosmetic modules for Minecraft 1.21.11.",
+  "authors": ["Smerker"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["ru.smerker.visuals.SmerkerVisualsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
