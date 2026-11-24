@@ -1,39 +1,24 @@
 # GhostBoost
 
-Клиентский Fabric-мод для **Minecraft 1.21.11**.
+**Owner:** smerk3r  
+**Minecraft:** 1.21.11  
+**Loader:** Fabric
 
-## Возможности текущей версии
+## Features
+- Modern dark-purple performance menu, opened with **Right Shift**.
+- Live FPS and render-distance status.
+- **FPS BOOST** preset: minimal particles and 8 chunks render distance.
+- **BALANCED** preset: decreased particles and 12 chunks render distance.
+- Particle mode toggle.
+- Render distance controls with 2-chunk steps (2–32).
+- Particle preference is saved in `.minecraft/config/ghostboost.properties`.
+- GitHub Actions builds the installable JAR automatically.
 
-- Открытие меню клавишей **Right Shift**.
-- Быстрый пресет: минимальные частицы и дальность прорисовки 8 чанков.
-- Сбалансированный пресет: уменьшенные частицы и дальность прорисовки 12 чанков.
-- Переключение частиц между минимальным и полным уровнем.
-- GitHub Actions автоматически собирает JAR при каждом push и pull request.
-- При публикации тега вида `v1.0.0` workflow автоматически прикрепляет JAR к GitHub Release.
+> This version applies real Minecraft video settings. It does not include custom renderer or chunk-engine patches, and does not claim a guaranteed FPS increase on every computer.
 
-> Это стартовая версия. Пресеты меняют встроенные настройки Minecraft. Собственных патчей движка рендеринга или загрузки чанков пока нет; мод не является заменой Sodium или Lithium.
-
-## Требования
-
-- Minecraft Java Edition 1.21.11 (runtime Java 21)
-- Fabric Loader
-- Fabric API для 1.21.11
-- Java 25 для локальной сборки (сам мод компилируется под Java 21)
-
-## Локальная сборка
-
-Из папки `GhostBoost` выполни:
-
-```bash
-gradle --no-daemon build
-```
-
-Устанавливаемый JAR появится в `build/libs/`. Выбирай файл без суффикса `-sources`.
-
-## Установка
-
-1. Установи Fabric Loader для Minecraft 1.21.11.
-2. Установи Fabric API для Minecraft 1.21.11.
-3. Скопируй JAR GhostBoost в папку `.minecraft/mods`.
-4. Запусти профиль Fabric.
-5. Нажми **Right Shift** в игре.
+## Install
+1. Install Fabric Loader for Minecraft 1.21.11.
+2. Install Fabric API for Minecraft 1.21.11.
+3. Download the JAR from the latest successful GitHub Actions run.
+4. Put the JAR into `.minecraft/mods`.
+5. Start the Fabric profile and press **Right Shift**.

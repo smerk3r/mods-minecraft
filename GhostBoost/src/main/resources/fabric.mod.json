@@ -3,8 +3,9 @@
   "id": "ghostboost",
   "version": "${version}",
   "name": "GhostBoost",
-  "description": "Client-side performance presets for Minecraft 1.21.11.",
-  "authors": ["GhostBoost"],
+  "description": "Client-side performance presets and settings panel for Minecraft 1.21.11.",
+  "authors": ["smerk3r"],
+  "icon": "assets/ghostboost/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": ["ru.ghostboost.GhostBoostClient"]

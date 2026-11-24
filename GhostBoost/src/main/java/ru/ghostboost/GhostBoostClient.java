@@ -14,6 +14,8 @@ public final class GhostBoostClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        GhostBoostConfig.load();
+
         openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
                 "key.ghostboost.open_menu",
                 InputConstants.Type.KEYSYM,
@@ -29,6 +31,7 @@ public final class GhostBoostClient implements ClientModInitializer {
             }
         });
 
+        Minecraft.getInstance().options.particles().set(GhostBoostConfig.particleStatus);
         System.out.println("[GhostBoost] Loaded. Press Right Shift to open the menu.");
     }
 
@@ -39,5 +42,11 @@ public final class GhostBoostClient implements ClientModInitializer {
                     Component.literal("§bGhostBoost §8» §f" + message), true
             );
         }
+    }
+
+    public static void setParticles(net.minecraft.server.level.ParticleStatus status) {
+        GhostBoostConfig.particleStatus = status;
+        Minecraft.getInstance().options.particles().set(status);
+        GhostBoostConfig.save();
     }
 }
